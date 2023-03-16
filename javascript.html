@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+<html lang = "en">  
+<head> 
+    <style>
+        .intro{
+      width: 100%;
+      display: flex;
+      border-collapse: collapse;
+      border: black;
+      background:whitesmoke;
+      border-style: solid;
+      border-color: green;
+      padding-bottom: 3px;
+      box-sizing: border-box;
+      padding: 0.5rem 1rem;
+    }
+    </style> 
+<title> JavaScript Calculator </title>  
+ <script>
+    function add()
+    {
+        var val1 = parseInt(document.getElementById("first").value);
+		var val2 = parseInt(document.getElementById("second").value);
+        var ans = val1+val2;
+		document.getElementById("ans").value = ans;
+    }
+    function sub()
+    {
+        var val1 = document.getElementById("first").value;
+		var val2 = document.getElementById("second").value;
+        var ans = val1-val2;
+		document.getElementById("ans").value = ans;
+    }
+    function mul()
+    {
+        var val1 = document.getElementById("first").value;
+		var val2 = document.getElementById("second").value;
+        var ans = val1*val2;
+		document.getElementById("ans").value = ans;
+    }
+    function div()
+    {
+        var val1 = document.getElementById("first").value;
+		var val2 = document.getElementById("second").value;
+        var ans = val1/val2;
+		document.getElementById("ans").value = ans;
+    }
+ </script> 
+ </head>
+<body>
+    <form>
+    <h2><b>Simple calculator</b></h2>
+        <h3><i>Enter first number:</i><input type="number" id="first"></h3>
+        <h3><i>Enter Second number:</i><input  type="number" id="second"></h3>
+        <button onclick="add()" class="intro">ADD:+</button>
+        <button onclick="sub()" class="intro">SUB:-</button>
+        <button onclick="mul()" class="intro">MUL:*</button>
+        <button onclick="div()" class="intro">DIV:/</button>
+        <h3><i>Value is:</i><input id="ans" "></h3>
+        </form>
+
+</body>
